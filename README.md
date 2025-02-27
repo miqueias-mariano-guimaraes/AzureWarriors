@@ -166,7 +166,7 @@ Uma collection para o Postman foi fornecida para testar os endpoints. Importe o 
 
 ## Contato
 
-Para dúvidas ou sugestões, entre em contato com [Seu Nome ou E-mail].
+Para dúvidas ou sugestões, entre em contato com miqueias.dev@gmail.com .
 
 ---
 
