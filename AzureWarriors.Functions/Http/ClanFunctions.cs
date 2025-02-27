@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Threading.Tasks;
+using AzureWarriors.Application.Interfaces.Services;
 using AzureWarriors.Application.Services;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
@@ -9,10 +10,10 @@ namespace AzureWarriors.Functions.Http
 {
     public class ClanFunctions
     {
-        private readonly ClanService _clanService;
-        private readonly UserService _userService;
+        private readonly IClanService _clanService;
+        private readonly IUserService _userService;
 
-        public ClanFunctions(ClanService clanService, UserService userService)
+        public ClanFunctions(IClanService clanService, IUserService userService)
         {
             _clanService = clanService;
             _userService = userService;

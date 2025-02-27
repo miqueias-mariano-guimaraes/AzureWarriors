@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Threading.Tasks;
+using AzureWarriors.Application.Interfaces.Services;
 using AzureWarriors.Application.Services;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
@@ -9,9 +10,9 @@ namespace AzureWarriors.Functions.Http
 {
     public class InvitationFunctions
     {
-        private readonly InvitationService _invitationService;
+        private readonly IInvitationService _invitationService;
 
-        public InvitationFunctions(InvitationService invitationService)
+        public InvitationFunctions(IInvitationService invitationService)
         {
             _invitationService = invitationService;
         }

@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Threading.Tasks;
-using AzureWarriors.Application.Interfaces;
+using AzureWarriors.Application.Interfaces.Repositories;
+using AzureWarriors.Application.Interfaces.Services;
 using AzureWarriors.Domain.Entities;
 
 namespace AzureWarriors.Application.Services
 {
-    public class UserService
+    public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
         private readonly ICommunityRepository _communityRepository;

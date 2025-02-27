@@ -4,14 +4,15 @@ using AzureWarriors.Application.Services;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
 using System;
+using AzureWarriors.Application.Interfaces.Services;
 
 namespace AzureWarriors.Functions.Http
 {
     public class UserFunctions
     {
-        private readonly UserService _userService;
+        private readonly IUserService _userService;
 
-        public UserFunctions(UserService userService)
+        public UserFunctions(IUserService userService)
         {
             _userService = userService;
         }

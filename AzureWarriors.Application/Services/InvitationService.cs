@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Threading.Tasks;
-using AzureWarriors.Application.Interfaces;
+using AzureWarriors.Application.Interfaces.Repositories;
+using AzureWarriors.Application.Interfaces.Services;
 using AzureWarriors.Domain.Entities;
 using AzureWarriors.Domain.Enums;
 
 namespace AzureWarriors.Application.Services
 {
-    public class InvitationService
+    public class InvitationService : IInvitationService
     {
         private readonly IInvitationRepository _invitationRepository;
         private readonly IClanRepository _clanRepository;

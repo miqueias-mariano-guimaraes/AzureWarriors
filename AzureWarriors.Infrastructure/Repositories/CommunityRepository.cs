@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using System.Data;
 using Dapper;
 using AzureWarriors.Domain.Entities;
-using AzureWarriors.Application.Interfaces; // <-- Interfaces definidas na Application
 using AzureWarriors.Infrastructure.Data;
+using AzureWarriors.Application.Interfaces.Repositories;
 
 namespace AzureWarriors.Infrastructure.Repositories
 {

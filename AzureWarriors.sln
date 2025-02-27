@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureWarriors.Functions", "AzureWarriors.Functions\AzureWarriors.Functions.csproj", "{2E88A968-9803-48BD-BD11-FBD9637AED54}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureWarriors.Application", "AzureWarriors.Application\AzureWarriors.Application.csproj", "{E3D2DEBB-898C-4C6E-B49D-151B93CC28F5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureWarriors.Infrastructure", "AzureWarriors.Infrastructure\AzureWarriors.Infrastructure.csproj", "{6AF4AEC9-248F-4042-86F3-F626F8AEECF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureWarriors.Tests", "AzureWarriors.Tests\AzureWarriors.Tests.csproj", "{3474E6A6-40A9-4C62-848C-6236A2CC846F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{6AF4AEC9-248F-4042-86F3-F626F8AEECF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AF4AEC9-248F-4042-86F3-F626F8AEECF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AF4AEC9-248F-4042-86F3-F626F8AEECF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3474E6A6-40A9-4C62-848C-6236A2CC846F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3474E6A6-40A9-4C62-848C-6236A2CC846F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3474E6A6-40A9-4C62-848C-6236A2CC846F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3474E6A6-40A9-4C62-848C-6236A2CC846F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

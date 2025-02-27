@@ -5,15 +5,16 @@ using AzureWarriors.Application.Services;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
 using System;
+using AzureWarriors.Application.Interfaces.Services;
 
 namespace AzureWarriors.Functions.Http
 {
     public class CommunityFunctions
     {
-        private readonly CommunityService _communityService;
-        private readonly UserService _userService;
+        private readonly ICommunityService _communityService;
+        private readonly IUserService _userService;
 
-        public CommunityFunctions(CommunityService communityService, UserService userService)
+        public CommunityFunctions(ICommunityService communityService, IUserService userService)
         {
             _communityService = communityService;
             _userService = userService;

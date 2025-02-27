@@ -4,8 +4,8 @@ using System.Threading.Tasks;
 using System.Data;
 using Dapper;
 using AzureWarriors.Domain.Entities;
-using AzureWarriors.Application.Interfaces;
 using AzureWarriors.Infrastructure.Data;
+using AzureWarriors.Application.Interfaces.Repositories;
 
 namespace AzureWarriors.Infrastructure.Repositories
 {

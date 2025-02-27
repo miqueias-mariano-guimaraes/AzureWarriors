@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using AzureWarriors.Domain.Entities;
 
-namespace AzureWarriors.Application.Interfaces
+namespace AzureWarriors.Application.Interfaces.Repositories
 {
     public interface IUserRepository
     {

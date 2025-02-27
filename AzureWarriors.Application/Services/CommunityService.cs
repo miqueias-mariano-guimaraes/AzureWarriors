@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Threading.Tasks;
-using AzureWarriors.Application.Interfaces;
 using AzureWarriors.Application.DTOs;
 using AzureWarriors.Domain.Entities;
+using AzureWarriors.Application.Interfaces.Repositories;
+using AzureWarriors.Application.Interfaces.Services;
 
 namespace AzureWarriors.Application.Services
 {
-    public class CommunityService
+    public class CommunityService : ICommunityService
     {
         private readonly ICommunityRepository _communityRepository;
 

@@ -1,13 +1,14 @@
-using Microsoft.Azure.Functions.Worker;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using AzureWarriors.Application.Interfaces;
+using AzureWarriors.Application.Interfaces.Repositories;
+using AzureWarriors.Application.Interfaces.Services;
 using AzureWarriors.Application.Services;
 using AzureWarriors.Infrastructure.Data;
 using AzureWarriors.Infrastructure.Repositories;
-using System.Data;
-using System.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using System.Text.Json.Serialization;
+using System.Text.Json;
+using AzureWarriors.Functions.Configurations;
 
 namespace AzureWarriors.Functions
 {
@@ -24,30 +25,25 @@ namespace AzureWarriors.Functions
                 .ConfigureFunctionsWebApplication()
                 .ConfigureServices(services =>
                 {
-                    // 1) Injetar a fábrica de conexão (opcional) ou IDbConnection diretamente
+                    // Conexão
                     services.AddScoped<IDbConnectionFactory, DbConnectionFactory>();
 
-                    // Caso prefira injetar IDbConnection diretamente:
-                    // services.AddScoped<IDbConnection>(provider =>
-                    // {
-                    //     var configuration = provider.GetRequiredService<IConfiguration>();
-                    //     var connString = configuration.GetConnectionString("SqlConnection");
-                    //     return new SqlConnection(connString);
-                    // });
-
-                    // 2) Registrar repositórios (Infrastructure)
-
+                    // Registra os repositórios.
                     services.AddScoped<ICommunityRepository, CommunityRepository>();
                     services.AddScoped<IClanRepository, ClanRepository>();
                     services.AddScoped<IUserRepository, UserRepository>();
                     services.AddScoped<IInvitationRepository, InvitationRepository>();
 
+                    // Registra os serviços
+                    services.AddScoped<ICommunityService, CommunityService>();
+                    services.AddScoped<IClanService, ClanService>();
+                    services.AddScoped<IUserService, UserService>();
+                    services.AddScoped<IInvitationService, InvitationService>();
 
-                    // 3) Registrar serviços (Application)
-                    services.AddScoped<CommunityService>();
-                    services.AddScoped<ClanService>();
-                    services.AddScoped<UserService>();
-                    services.AddScoped<InvitationService>();
+                }).ConfigureFunctionsWorkerDefaults(worker =>
+                {
+                    // Registra o Middleware de Serialização customizada
+                    worker.UseMiddleware<CustomSerializationMiddleware>();
                 })
                 .Build();
 

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using AzureWarriors.Domain.Entities;
 using AzureWarriors.Domain.Enums;
 
-namespace AzureWarriors.Application.Interfaces
+namespace AzureWarriors.Application.Interfaces.Repositories
 {
     public interface IInvitationRepository
     {
