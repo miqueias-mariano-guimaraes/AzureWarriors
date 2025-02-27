@@ -1,19 +1,17 @@
 # Game Backend as a Service
 
-## Introdução
+## Introduction
 
-Atualmente, muitos jogos online utilizam plataformas de **Backend as a Service (BaaS)** para delegar funcionalidades complexas do lado do servidor, como autenticação de jogadores, armazenamento de dados, matchmaking, etc. Esses serviços permitem que equipes de desenvolvimento foquem no core do gameplay, enquanto o BaaS oferece infraestrutura escalável, integrações com outros serviços e módulos prontos para uso.
+Today, many online games use **Backend as a Service (BaaS)** platforms to offload complex server-side functionalities such as player authentication, data storage, matchmaking, and more. These services allow development teams to focus on the core gameplay while the BaaS provides scalable infrastructure, integrations with other services, and ready-to-use modules.
 
-Dentro de um BaaS para jogos, o **módulo “Social”** é responsável por proporcionar a interação entre jogadores, viabilizando listas de amigos, chat, ranking, criação de guilds ou clans e outras mecânicas que promovam engajamento. Em alguns casos, esse módulo é subdividido em serviços específicos, como o de **Guild/Clan Management** (para agrupar jogadores em equipes ou comunidades) e o de **Leaderboards** (para classificação e competitividade).
+Within a Game BaaS, the **Social Module** is responsible for enabling player interaction by providing features like friends lists, chat, leaderboards, guild or clan creation, and other mechanics that drive engagement. In some cases, this module is subdivided into specific services such as **Guild/Clan Management** (for grouping players into teams or communities) and **Leaderboards** (for ranking and competitiveness).
 
-O fluxograma abaixo ilustra como esses submódulos se conectam no contexto geral de um Game BaaS, mostrando também outros módulos comuns em plataformas desse tipo.
+The flowchart below illustrates how these submodules connect within the overall context of a Game BaaS, along with other common modules in such platforms.
 
-### Estrutura do Game BaaS e Submódulos
+### Game BaaS Structure and Submodules
 
 ```mermaid
-
 flowchart TB
-
     A[Game BaaS Platform] --> B(Matchmaking)
     A --> C[Authentication]
     A --> D[Social Module]
@@ -25,68 +23,67 @@ flowchart TB
     D --> I[Leaderboard]
     D --> J[Chat/Communication]
 
-    classDef destaque fill:#BFA
+    classDef highlight fill:#BFA
 
-    class H,I destaque
-
+    class H,I highlight
 ```
 
-### Explicação do Fluxograma
+### Flowchart Explanation
 
 #### 1. Game BaaS Platform
 
-- **Descrição**: Representa a plataforma de Backend-as-a-Service para jogos, onde se concentram vários módulos que suportam as funcionalidades de um game online (autenticação, matchmaking, dados de jogador, social, etc.).
-- **Responsabilidade**: Agregar todos os serviços indispensáveis a um ambiente de jogo completo.
+- **Description:** Represents the Backend-as-a-Service platform for games, aggregating various modules that support the functionalities of an online game (authentication, matchmaking, player data, social, etc.).
+- **Responsibility:** To aggregate all indispensable services for a complete gaming environment.
 
 #### 2. Social Module
 
-- **Descrição**: Módulo encarregado de funcionalidades sociais no jogo (relacionamentos entre usuários, grupos, comunicação).
-- **Responsabilidade**: Servir de núcleo para todos os recursos de interação entre jogadores, incluindo gerenciamento de guilds/clans, leaderboard, lista de amigos, chat, etc.
+- **Description:** The module responsible for social functionalities within the game (user relationships, groups, communication).
+- **Responsibility:** To serve as the core for all player interaction features, including guild/clan management, leaderboards, friends lists, chat, and more.
 
 #### 3. Guild/Clan Management
 
-- **Descrição**: Submódulo que lida especificamente com a criação e organização de comunidades no jogo (guilds, clans, grupos), definindo regras de entrada, saída, convites, permissões, etc.
-- **Responsabilidade**: Controlar a hierarquia e a administração das comunidades (clãs, guilds), armazenando informações de membros e status dentro do jogo.
+- **Description:** A submodule that specifically handles the creation and organization of in-game communities (guilds, clans, groups), defining rules for entry, exit, invitations, permissions, etc.
+- **Responsibility:** To control the hierarchy and administration of communities (guilds/clans), storing information about members and their status within the game.
 
 #### 4. Leaderboard
 
-- **Descrição**: Submódulo que cuida de toda a lógica de pontuação e classificação dos jogadores ou das guilds/clans.
-- **Responsabilidade**: Calcular e exibir rankings de acordo com dados (como pontuação, conquistas, estatísticas). É um elemento crucial para incentivar a competitividade e engajamento.
+- **Description:** A submodule that manages the scoring and ranking logic for players or guilds/clans.
+- **Responsibility:** To calculate and display rankings based on data (such as score, achievements, statistics). It is a crucial element for fostering competitiveness and engagement.
 
 #### 5. Friends/Contacts
 
-- **Descrição**: Submódulo voltado ao gerenciamento de amizades, listas de contatos e conexões entre jogadores.
-- **Responsabilidade**: Facilitar interações entre jogadores que queiram se adicionar como amigos, acompanhar status online/offline e enviar convites.
+- **Description:** A submodule focused on managing friendships, contact lists, and connections between players.
+- **Responsibility:** To facilitate interactions between players who wish to add each other as friends, track online/offline status, and send invitations.
 
 #### 6. Chat/Communication
 
-- **Descrição**: Submódulo que provê recursos de mensagens (privadas ou em grupo), canais de discussão, possivelmente com suporte a voz ou chat em tempo real.
-- **Responsabilidade**: Permitir aos jogadores se comunicarem facilmente, organizando estratégias, discussões ou conversas casuais.
+- **Description:** A submodule that provides messaging features (private or group), discussion channels, and possibly support for real-time voice or chat.
+- **Responsibility:** To enable easy communication among players for strategies, discussions, or casual conversation.
 
 #### 7. Authentication
 
-- **Descrição**: Módulo para verificar e gerenciar a identidade de cada jogador, podendo integrar redes sociais ou provedores de login customizados.
-- **Responsabilidade**: Garantir a segurança e identidade de cada usuário, servindo como base para que os demais módulos reconheçam quem está logado.
+- **Description:** The module for verifying and managing each player's identity, possibly integrating with social networks or custom login providers.
+- **Responsibility:** To ensure the security and identity of each user, serving as the foundation for all other modules to recognize the logged-in user.
 
 #### 8. Matchmaking
 
-- **Descrição**: Módulo responsável por criar partidas entre jogadores de forma equilibrada (por nível, habilidades, região etc.).
-- **Responsabilidade**: Reunir jogadores ou equipes para iniciarem um jogo (partida), analisando critérios e alocando recursos de servidor.
+- **Description:** The module responsible for creating balanced matches between players (by level, skills, region, etc.).
+- **Responsibility:** To gather players or teams to start a game match, analyzing criteria and allocating server resources.
 
 #### 9. Economy/Inventory
 
-- **Descrição**: Módulo que controla a lógica de compras, moeda virtual, itens, inventário de jogadores e transações dentro do jogo.
-- **Responsabilidade**: Gerenciar tudo relacionado ao sistema econômico do jogo, como saldo de moedas, aquisição de itens e upgrades.
+- **Description:** The module that handles the logic for purchases, virtual currency, items, player inventory, and in-game transactions.
+- **Responsibility:** To manage everything related to the game's economic system, such as currency balance, item acquisition, and upgrades.
 
 #### 10. Analytics/Telemetry
 
-- **Descrição**: Módulo que recolhe dados de uso, métricas de retenção, estatísticas de partidas, comportamento de jogadores, etc.
-- **Responsabilidade**: Fornecer insights de uso e desempenho, auxiliando equipes de desenvolvimento e negócio na tomada de decisões.
+- **Description:** The module that collects usage data, retention metrics, match statistics, player behavior, etc.
+- **Responsibility:** To provide insights on usage and performance, assisting development and business teams in decision-making.
 
 ---
 
-## Observações Finais
+## Final Observations
 
-1. **Guild/Clan Management** e **Leaderboard** estão diretamente ligados ao **módulo “Social”** porque tratam de relacionamentos e pontuações competitivas entre jogadores.
-2. Em um **Game BaaS** completo, todos esses módulos (Social, Auth, Matchmaking, etc.) se integram para proporcionar uma experiência consistente ao jogador.
-3. **O projeto da Parte 2** da Avaliação Técnica se enquadra principalmente como **Guild/Clan Management** + **Leaderboard**, funcionando como parte de um **Social Module** para uma plataforma de **Game BaaS**.
+1. **Guild/Clan Management** and **Leaderboard** are directly connected to the **Social Module** because they deal with relationships and competitive scoring among players.
+2. In a complete **Game BaaS**, all these modules (Social, Authentication, Matchmaking, etc.) integrate to provide a consistent player experience.
+3. The Part 2 project in the technical evaluation primarily falls under **Guild/Clan Management** + **Leaderboard**, functioning as part of the **Social Module** for a Game BaaS platform.
