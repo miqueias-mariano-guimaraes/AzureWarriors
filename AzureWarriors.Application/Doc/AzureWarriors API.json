@@ -1,0 +1,303 @@
+{
+    "info": {
+      "_postman_id": "aedfe2c7-0000-4d30-86a6-999999999999",
+      "name": "AzureWarriors API",
+      "description": "Collection de testes dos endpoints do AzureWarriors.Functions",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "CreateUser",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"username\": \"JohnDoe\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:7071/api/CreateUser",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "7071",
+            "path": [
+              "api",
+              "CreateUser"
+            ]
+          }
+        }
+      },
+      {
+        "name": "CreateCommunity",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"name\": \"My Community\",\n  \"description\": \"Description of my community\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:7071/api/CreateCommunity",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "7071",
+            "path": [
+              "api",
+              "CreateCommunity"
+            ]
+          }
+        }
+      },
+      {
+        "name": "GetCommunity",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:7071/api/GetCommunity/{{communityId}}",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "7071",
+            "path": [
+              "api",
+              "GetCommunity",
+              "{{communityId}}"
+            ]
+          }
+        }
+      },
+      {
+        "name": "JoinCommunity",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"userId\": \"{{userId}}\",\n  \"communityId\": \"{{communityId}}\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:7071/api/JoinCommunity",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "7071",
+            "path": [
+              "api",
+              "JoinCommunity"
+            ]
+          }
+        }
+      },
+      {
+        "name": "CreateClan",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"communityId\": \"{{communityId}}\",\n  \"leaderUserId\": \"{{leaderUserId}}\",\n  \"clanName\": \"WarriorsClan\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:7071/api/CreateClan",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "7071",
+            "path": [
+              "api",
+              "CreateClan"
+            ]
+          }
+        }
+      },
+      {
+        "name": "GetClan",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:7071/api/GetClan/{{clanId}}",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "7071",
+            "path": [
+              "api",
+              "GetClan",
+              "{{clanId}}"
+            ]
+          }
+        }
+      },
+      {
+        "name": "JoinClan",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"userId\": \"{{userId}}\",\n  \"clanId\": \"{{clanId}}\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:7071/api/JoinClan",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "7071",
+            "path": [
+              "api",
+              "JoinClan"
+            ]
+          }
+        }
+      },
+      {
+        "name": "LeaveClan",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"userId\": \"{{userId}}\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:7071/api/LeaveClan",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "7071",
+            "path": [
+              "api",
+              "LeaveClan"
+            ]
+          }
+        }
+      },
+      {
+        "name": "KickMember",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"clanId\": \"{{clanId}}\",\n  \"leaderUserId\": \"{{leaderUserId}}\",\n  \"targetUserId\": \"{{targetUserId}}\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:7071/api/KickMember",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "7071",
+            "path": [
+              "api",
+              "KickMember"
+            ]
+          }
+        }
+      },
+      {
+        "name": "InviteToClan",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"clanId\": \"{{clanId}}\",\n  \"userId\": \"{{userId}}\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:7071/api/InviteToClan",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "7071",
+            "path": [
+              "api",
+              "InviteToClan"
+            ]
+          }
+        }
+      },
+      {
+        "name": "RespondInvitation",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"invitationId\": \"{{invitationId}}\",\n  \"accept\": true\n}"
+          },
+          "url": {
+            "raw": "http://localhost:7071/api/RespondInvitation",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "7071",
+            "path": [
+              "api",
+              "RespondInvitation"
+            ]
+          }
+        }
+      }
+    ]
+  }
+  

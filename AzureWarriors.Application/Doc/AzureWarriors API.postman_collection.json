@@ -1,0 +1,1191 @@
+{
+	"info": {
+		"_postman_id": "438778f9-c024-426c-a39a-c78151839721",
+		"name": "AzureWarriors API",
+		"description": "Collection de testes dos endpoints do AzureWarriors.Functions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13604960",
+		"_collection_link": "https://guimarios.postman.co/workspace/FLYEMB~52a399cf-16c2-4f8c-926e-f57965566dc2/collection/13604960-438778f9-c024-426c-a39a-c78151839721?action=share&source=collection_link&creator=13604960"
+	},
+	"item": [
+		{
+			"name": "CreateUser",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "Analise",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Analise",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": {{username}}\n}"
+				},
+				"url": {
+					"raw": "{{local}}/api/CreateUser",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"CreateUser"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CreateUser",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"MikeMaster\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:7071/api/CreateUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"CreateUser"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Feb 2025 01:31:38 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Id\": \"796b66ec-0df1-4b3f-ab54-1c4422d4c9ba\",\n    \"Username\": \"MikeMaster\",\n    \"CommunityId\": null,\n    \"ClanId\": null,\n    \"Points\": 0\n}"
+				},
+				{
+					"name": "CreateUser",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"MikeUser\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:7071/api/CreateUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"CreateUser"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Feb 2025 01:55:01 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Id\": \"e2b3cbf4-52d7-4f87-bdd3-06b5841526d0\",\n    \"Username\": \"MikeUser\",\n    \"CommunityId\": null,\n    \"ClanId\": null,\n    \"Points\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "CreateCommunity",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "x-functions-key",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "Analise",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": {{name}},\n  \"description\": {{description}}\n}"
+				},
+				"url": {
+					"raw": "{{local}}/api/CreateCommunity",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"CreateCommunity"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CreateCommunity",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"MikeCommunity\",\n  \"description\": \"Community teste12\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:7071/api/CreateCommunity",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"CreateCommunity"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Feb 2025 01:30:46 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Id\": \"b473a395-20d3-4005-9438-9e2daf344d30\",\n    \"Name\": \"MikeCommunity\",\n    \"Description\": \"Community teste12\",\n    \"CreatedAt\": \"2025-02-27T01:30:46.4651241Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GetCommunity",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "x-functions-key",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "Analise",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/api/GetCommunity/b473a395-20d3-4005-9438-9e2daf344d30",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"GetCommunity",
+						"b473a395-20d3-4005-9438-9e2daf344d30"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetCommunity",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7071/api/GetCommunity/b473a395-20d3-4005-9438-9e2daf344d30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"GetCommunity",
+								"b473a395-20d3-4005-9438-9e2daf344d30"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Feb 2025 01:54:14 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Id\": \"b473a395-20d3-4005-9438-9e2daf344d30\",\n    \"Name\": \"MikeCommunity\",\n    \"Description\": \"Community teste12\",\n    \"CreatedAt\": \"2025-02-27T01:30:46.467\"\n}"
+				}
+			]
+		},
+		{
+			"name": "JoinCommunity",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "x-functions-key",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "Analise",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\": \"{{userId}}\",\n  \"communityId\": \"{{communityId}}\"\n}"
+				},
+				"url": {
+					"raw": "{{local}}/api/JoinCommunity",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"JoinCommunity"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "JoinCommunity",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": \"796b66ec-0df1-4b3f-ab54-1c4422d4c9ba\",\n  \"communityId\": \"b473a395-20d3-4005-9438-9e2daf344d30\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:7071/api/JoinCommunity",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"JoinCommunity"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 27 Feb 2025 01:42:55 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "User joined the community successfully!"
+				},
+				{
+					"name": "JoinCommunity",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": \"a93f48af-dd5a-4fad-841b-b99db7e062e6\",\n  \"communityId\": \"b473a395-20d3-4005-9438-9e2daf344d30\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:7071/api/JoinCommunity",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"JoinCommunity"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 27 Feb 2025 02:49:27 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "User joined the community successfully!"
+				}
+			]
+		},
+		{
+			"name": "CreateClan",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "x-functions-key",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "Analise",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"communityId\": \"{{communityId}}\",\n  \"leaderUserId\": \"{{leaderUserId}}\",\n  \"clanName\": \"WarriorsClan\"\n}"
+				},
+				"url": {
+					"raw": "{{local}}/api/CreateClan",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"CreateClan"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CreateClan",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"communityId\": \"b473a395-20d3-4005-9438-9e2daf344d30\",\n  \"leaderUserId\": \"796b66ec-0df1-4b3f-ab54-1c4422d4c9ba\",\n  \"clanName\": \"WarriorsClan\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:7071/api/CreateClan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"CreateClan"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Feb 2025 02:45:27 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Id\": \"a32cff67-0e57-4016-b50a-fd102a6b4140\",\n    \"CommunityId\": \"b473a395-20d3-4005-9438-9e2daf344d30\",\n    \"LeaderUserId\": \"796b66ec-0df1-4b3f-ab54-1c4422d4c9ba\",\n    \"Name\": \"WarriorsClan\",\n    \"CreatedAt\": \"2025-02-27T02:45:28.1636827Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GetClan",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "x-functions-key",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "Analise",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/api/GetClan/{{clanId}}",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"GetClan",
+						"{{clanId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetClan",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7071/api/GetClan/a32cff67-0e57-4016-b50a-fd102a6b4140",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"GetClan",
+								"a32cff67-0e57-4016-b50a-fd102a6b4140"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Feb 2025 01:53:39 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Id\": \"a32cff67-0e57-4016-b50a-fd102a6b4140\",\n    \"CommunityId\": \"b473a395-20d3-4005-9438-9e2daf344d30\",\n    \"LeaderUserId\": \"796b66ec-0df1-4b3f-ab54-1c4422d4c9ba\",\n    \"Name\": \"WarriorsClan\",\n    \"CreatedAt\": \"2025-02-27T01:53:16.363\"\n}"
+				}
+			]
+		},
+		{
+			"name": "JoinClan",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "x-functions-key",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "Analise",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\": \"{{userId}}\",\n  \"clanId\": \"{{clanId}}\"\n}"
+				},
+				"url": {
+					"raw": "{{local}}/api/JoinClan",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"JoinClan"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "JoinClan",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": \"a93f48af-dd5a-4fad-841b-b99db7e062e6\",\n  \"clanId\": \"a32cff67-0e57-4016-b50a-fd102a6b4140\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:7071/api/JoinClan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"JoinClan"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 27 Feb 2025 02:49:42 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "User joined the clan successfully."
+				}
+			]
+		},
+		{
+			"name": "LeaveClan",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "x-functions-key",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "Analise",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\": \"{{userId}}\",\n  \"clanId\": \"{{clanId}}\"\n}"
+				},
+				"url": {
+					"raw": "{{local}}/api/LeaveClan",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"LeaveClan"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "LeaveClan",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": \"a93f48af-dd5a-4fad-841b-b99db7e062e6\",\n  \"clanId\": \"a32cff67-0e57-4016-b50a-fd102a6b4140\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:7071/api/LeaveClan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"LeaveClan"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 27 Feb 2025 02:59:52 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "User left the clan successfully."
+				}
+			]
+		},
+		{
+			"name": "KickMember",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "x-functions-key",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "Analise",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"clanId\": \"{{clanId}}\",\n  \"leaderUserId\": \"{{leaderUserId}}\",\n  \"targetUserId\": \"{{targetUserId}}\"\n}"
+				},
+				"url": {
+					"raw": "{{local}}/api/KickMember",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"KickMember"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "KickMember",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"clanId\": \"a32cff67-0e57-4016-b50a-fd102a6b4140\",\n  \"leaderUserId\": \"796b66ec-0df1-4b3f-ab54-1c4422d4c9ba\",\n  \"targetUserId\": \"a93f48af-dd5a-4fad-841b-b99db7e062e6\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:7071/api/KickMember",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"KickMember"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 27 Feb 2025 03:14:24 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "Member kicked from clan."
+				}
+			]
+		},
+		{
+			"name": "InviteToClan",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "x-functions-key",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "Analise",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n  \"clanId\": \"{{clanId}}\",\n  \"leaderUserId\": \"{{leaderUserId}}\",\n  \"userId\": \"{{userId}}\"\n}"
+				},
+				"url": {
+					"raw": "{{local}}/api/InviteToClan",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"InviteToClan"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "InviteToClan",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"clanId\": \"a32cff67-0e57-4016-b50a-fd102a6b4140\",\n  \"leaderUserId\": \"796b66ec-0df1-4b3f-ab54-1c4422d4c9ba\",\n  \"userId\": \"a93f48af-dd5a-4fad-841b-b99db7e062e6\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:7071/api/InviteToClan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"InviteToClan"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Feb 2025 03:22:21 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Id\": \"aa965af7-5e57-4bbe-80d8-58eb48f850b2\",\n    \"ClanId\": \"a32cff67-0e57-4016-b50a-fd102a6b4140\",\n    \"UserId\": \"a93f48af-dd5a-4fad-841b-b99db7e062e6\",\n    \"Status\": 0,\n    \"CreatedAt\": \"2025-02-27T03:22:21.4776992Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "RespondInvitation",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "x-functions-key",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "Analise",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"invitationId\": \"{{invitationId}}\",\n  \"accept\": true\n}"
+				},
+				"url": {
+					"raw": "{{local}}/api/RespondInvitation",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"RespondInvitation"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "True",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"invitationId\": \"aa965af7-5e57-4bbe-80d8-58eb48f850b2\",\n  \"accept\": true\n}"
+						},
+						"url": {
+							"raw": "http://localhost:7071/api/RespondInvitation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"RespondInvitation"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 27 Feb 2025 03:23:13 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "Invitation response updated."
+				},
+				{
+					"name": "false",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"invitationId\": \"aa965af7-5e57-4bbe-80d8-58eb48f850b2\",\n  \"accept\": false\n}"
+						},
+						"url": {
+							"raw": "http://localhost:7071/api/RespondInvitation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"RespondInvitation"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 27 Feb 2025 03:24:09 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "Invitation response updated."
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "in",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "Analise",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "Analise",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "http://localhost:7071",
+			"type": "string"
+		},
+		{
+			"key": "azure",
+			"value": "https://azure-warriors.azurewebsites.net",
+			"type": "string"
+		}
+	]
+}
